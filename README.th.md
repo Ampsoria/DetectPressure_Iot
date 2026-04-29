@@ -9,7 +9,9 @@
 
 ## 📸 Demo
 
-![Dashboard Demo](Demo/Screenshot%202026-03-16%20231114.png)
+<div align="center">
+  <img src="Demo/dashboard_demo.png" alt="Dashboard Demo" width="100%">
+</div>
 
 ---
 
