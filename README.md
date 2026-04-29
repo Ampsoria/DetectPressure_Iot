@@ -8,7 +8,8 @@
 [![Firebase](https://img.shields.io/badge/Firebase-RTDB-orange?style=for-the-badge&logo=firebase&logoColor=white)](https://firebase.google.com/)
 [![Telegram](https://img.shields.io/badge/Telegram-Bot_Alert-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white)](https://core.telegram.org/bots)
 [![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)](LICENSE)
-[![YouTube](https://img.shields.io/badge/YouTube-Demo_Video-FF0000?style=for-the-badge&logo=youtube&logoColor=white)](https://www.youtube.com/watch?v=_hwR8I9PEMo)
+
+[![YouTube](https://img.shields.io/badge/▶_ดูคลิปรีวิวและสาธิตการใช้งาน-FF0000?style=for-the-badge&logo=youtube&logoColor=white)](https://www.youtube.com/watch?v=_hwR8I9PEMo)
 
 **ESP32 + RFP-602 Sensor → Firebase Realtime DB → Web Dashboard + Telegram Alerts**
 
