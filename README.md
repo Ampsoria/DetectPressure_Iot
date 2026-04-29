@@ -23,8 +23,6 @@
 
 ![Dashboard Demo](Demo/Screenshot%202026-03-16%20231114.png)
 
-[![Watch Demo on YouTube](https://img.shields.io/badge/▶_Watch_Demo_on_YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white)](https://youtu.be/liJJjYXSja4?si=EtUMND9SOJLoT3qW)
-
 </div>
 
 ---

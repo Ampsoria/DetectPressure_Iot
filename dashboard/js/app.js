@@ -15,11 +15,6 @@
   const SENSOR_MAX_KG    = 5.0;
   const GAUGE_CIRCUMFERENCE = 534;  // 2 * π * 85 ≈ 534
 
-  // ── Default Firebase Config (ฝังค่าไว้เลยไม่ต้องกรอกทุกรอบ) ──────────
-  const DEFAULT_API_KEY   = '';  // ใส่ Firebase API Key ของคุณ หรือกรอกผ่าน Settings
-  const DEFAULT_DB_URL    = '';  // ใส่ Firebase Database URL ของคุณ หรือกรอกผ่าน Settings
-  const DEFAULT_DEVICE_ID = 'esp32_node_01';
-
   // ═══════════════════════════════════════════════════════════════════════════
   //  State
   // ═══════════════════════════════════════════════════════════════════════════
@@ -79,20 +74,17 @@
     initChart();
     bindEvents();
 
-    // Try loading saved config → fallback to hardcoded defaults
+    // Try loading saved config
     const saved = loadConfig();
-    const apiKey   = (saved && saved.apiKey)   || DEFAULT_API_KEY;
-    const dbUrl    = (saved && saved.dbUrl)     || DEFAULT_DB_URL;
-    const devId    = (saved && saved.deviceId)  || DEFAULT_DEVICE_ID;
-
-    // Pre-fill the modal inputs (in case user opens settings later)
-    dom.inputApiKey.value   = apiKey;
-    dom.inputDbUrl.value    = dbUrl;
-    dom.inputDeviceId.value = devId;
-
-    // Auto-connect immediately — no need to fill the form!
-    saveConfig({ apiKey, dbUrl, deviceId: devId });
-    connectFirebase(apiKey, dbUrl, devId);
+    if (saved && saved.apiKey && saved.dbUrl) {
+      dom.inputApiKey.value   = saved.apiKey;
+      dom.inputDbUrl.value    = saved.dbUrl;
+      dom.inputDeviceId.value = saved.deviceId || 'esp32_node_01';
+      connectFirebase(saved.apiKey, saved.dbUrl, saved.deviceId || 'esp32_node_01');
+    } else {
+      // Show settings modal on first run
+      openSettingsModal();
+    }
   }
 
   // ═══════════════════════════════════════════════════════════════════════════
